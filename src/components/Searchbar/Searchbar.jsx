@@ -1,6 +1,6 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 import { BsSearch } from 'react-icons/bs';
-
 import { Component } from 'react';
 import {
   Header,
@@ -21,10 +21,12 @@ export class Searchbar extends Component {
   handleSubmit = evt => {
     evt.preventDefault();
     if (this.state.searchQuery.trim() === '') {
-      alert(
+      // return alert(
+      //   'The search string cannot be empty. Please specify your search query.'
+      // );
+      return toast.error(
         'The search string cannot be empty. Please specify your search query.'
       );
-      return;
     }
     this.props.onSubmit(this.state.searchQuery);
     this.setState({ searchQuery: '' });

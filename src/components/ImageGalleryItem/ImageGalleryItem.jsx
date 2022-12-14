@@ -1,10 +1,13 @@
 import React from 'react';
-//import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ImageGalleryItemImage } from './ImageGalleryItemImage.styled';
-//import { Modal } from '../Modal/Modal';
 
-export const ImageGalleryItem = ({webformatURL, tags, largeImageURL, onSelect }) => {
+export const ImageGalleryItem = ({
+  webformatURL,
+  tags,
+  largeImageURL,
+  onSelect,
+}) => {
   return (
     <div>
       <ImageGalleryItemImage
@@ -25,8 +28,10 @@ ImageGalleryItem.propTypes = {
   }),
 };
 
-
 // Модальное окно на элементе
+
+//import { Component } from 'react';
+//import { Modal } from '../Modal/Modal';
 
 // export class ImageGalleryItem extends Component {
 //   state = {
