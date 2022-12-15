@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import toast from 'react-hot-toast';
 import { BsSearch } from 'react-icons/bs';
 import { Component } from 'react';
@@ -10,6 +11,10 @@ import {
 } from './Searchbar.styled';
 
 export class Searchbar extends Component {
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  };
+
   state = {
     searchQuery: '',
   };
@@ -29,7 +34,6 @@ export class Searchbar extends Component {
       );
     }
     this.props.onSubmit(this.state.searchQuery);
-    this.setState({ searchQuery: '' });
   };
 
   render() {

@@ -55,14 +55,18 @@ export class App extends Component {
     }
   };
 
-  handleFormSubmit = searchQuery => {
-    this.setState({
-      images: [],
-      page: 1,
-      searchQuery: searchQuery,
-      error: null,
-    });
+  handleFormSubmit = ( searchQuery)  => {
+    if (searchQuery !== this.state.searchQuery) {
+      this.setState({
+        images: [],
+        page: 1,
+        searchQuery: searchQuery,
+        error: null,
+      });
+    }
   };
+
+
 
   loadMore = () => {
     this.setState(prevState => ({
