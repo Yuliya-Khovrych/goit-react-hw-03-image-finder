@@ -20,11 +20,10 @@ export const ImageGalleryItem = ({
 };
 
 ImageGalleryItem.propTypes = {
-  
-    webformatURL: PropTypes.string.isRequired,
-    tags: PropTypes.string.isRequired,
-    largeImageURL: PropTypes.string.isRequired,
-    onSelect: PropTypes.func.isRequired,
+  webformatURL: PropTypes.string.isRequired,
+  tags: PropTypes.string.isRequired,
+  largeImageURL: PropTypes.string.isRequired,
+  onSelect: PropTypes.func.isRequired,
 };
 
 // Модальное окно на элементе
